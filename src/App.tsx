@@ -33,10 +33,10 @@ export function App() {
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-[#0A0A0A] text-white font-montserrat">
+      <div className="flex flex-col min-h-screen bg-white text-slate-900 font-montserrat">
         <ScrollToTop />
 
-        {/* Fixed Dark Navbar */}
+        {/* Fixed Navbar */}
         <Navbar onRequestQuote={() => handleOpenQuoteModal()} />
 
         {/* Main Content */}

@@ -36,24 +36,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
       <div
         className={`transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/95 backdrop-blur-xl border-b border-white/8 shadow-xl shadow-black/50'
-            : 'bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/5'
+            ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm'
+            : 'bg-white/90 backdrop-blur-md border-b border-slate-100'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-6">
 
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
-            <div className="w-8 h-8 rounded-full bg-[#DF9A28] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <svg width="18" height="18" viewBox="0 0 100 100" fill="none">
-                <polygon
-                  points="50,10 61,35 88,35 67,53 75,78 50,62 25,78 33,53 12,35 39,35"
-                  fill="none" stroke="#000" strokeWidth="6" strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="font-montserrat font-extrabold text-white text-sm tracking-tight select-none">
-              Golden Star <span className="text-[#DF9A28]">Company</span>
+          {/* Official Company Logo */}
+          <Link to="/" className="flex items-center gap-3 shrink-0 group">
+            <img
+              src="/golden-star-logo.png"
+              alt="Golden Star Company"
+              className="h-11 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform drop-shadow-xs"
+            />
+            <span className="font-montserrat font-black text-slate-900 text-sm sm:text-base tracking-tight select-none">
+              Golden Star <span className="text-[#EA580C]">Company</span>
             </span>
           </Link>
 
@@ -63,10 +60,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${
+                className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
                   isCurrent(link.path)
-                    ? 'text-[#DF9A28] bg-[#DF9A28]/10'
-                    : 'text-white/50 hover:text-white hover:bg-white/5'
+                    ? 'text-[#EA580C] bg-orange-50 font-black'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                 }`}
               >
                 {link.label}
@@ -75,16 +72,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
           </nav>
 
           {/* Right actions */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
             <Link
               to="/contact"
-              className="text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors px-3 py-2"
+              className="text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors px-2 py-2"
             >
               Contact
             </Link>
             <button
               onClick={onRequestQuote}
-              className="flex items-center gap-1.5 bg-[#DF9A28] hover:bg-[#E8A738] text-black text-xs font-black uppercase tracking-widest px-5 py-2.5 rounded-full transition-all hover:shadow-lg hover:shadow-[#DF9A28]/30"
+              className="flex items-center gap-1.5 bg-[#EA580C] hover:bg-[#C2410C] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-sm hover:shadow-md cursor-pointer"
             >
               Get Quote <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
@@ -92,11 +89,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/25 transition-all"
+            className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all cursor-pointer"
             onClick={() => setIsMobileMenuOpen(v => !v)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -105,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'max-h-[400px]' : 'max-h-0'
-        } bg-[#0D0D0D] border-b border-white/10`}
+        } bg-white border-b border-slate-200 shadow-xl`}
       >
         <div className="px-4 py-4 space-y-1">
           {navLinks.map(link => (
@@ -114,19 +111,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onRequestQuote }) => {
               to={link.path}
               className={`block px-4 py-3 rounded-lg text-sm font-bold transition-all ${
                 isCurrent(link.path)
-                  ? 'text-[#DF9A28] bg-[#DF9A28]/10'
-                  : 'text-white/55 hover:text-white hover:bg-white/5'
+                  ? 'text-[#EA580C] bg-orange-50 font-black'
+                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-50'
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="block px-4 py-3 rounded-lg text-sm font-bold text-white/55 hover:text-white hover:bg-white/5 transition-all">
+          <Link to="/contact" className="block px-4 py-3 rounded-lg text-sm font-bold text-slate-700 hover:text-slate-950 hover:bg-slate-50 transition-all">
             Contact
           </Link>
           <button
             onClick={onRequestQuote}
-            className="w-full mt-2 bg-[#DF9A28] text-black font-black text-sm uppercase tracking-widest px-4 py-3 rounded-full"
+            className="w-full mt-2 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-sm uppercase tracking-wider px-4 py-3 rounded-full transition-all shadow-sm cursor-pointer"
           >
             Get a Quote →
           </button>
