@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-main: 'Montserrat', system-ui, sans-serif;
+    --color-bg: #0A0A0A;
+    --color-surface: #111111;
+    --color-card: #161616;
+    --color-border: #262626;
+    --color-text: #FFFFFF;
+    --color-muted: #A3A3A3;
+    --color-gold: #DF9A28;
+    --color-red: #EF4444;
+    --color-sky: #38BDF8;
+    --color-orange: #F97316;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: 16px;
+    background: #0A0A0A;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* All headings use Montserrat */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  h1 { font-weight: 800; line-height: 1.05; }
+  h2 { font-weight: 700; line-height: 1.15; }
+  h3 { font-weight: 600; line-height: 1.25; }
+  h4, h5, h6 { font-weight: 600; }
+  p { font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 1.7; }
+
+  /* Focus Rings */
+  *:focus-visible {
+    outline: 2px solid #DF9A28;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* === BUTTONS === */
+  .btn-primary {
+    background: #DF9A28;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    padding: 0.875rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-primary:hover {
+    background: #E8A738;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(223, 154, 40, 0.4);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.875rem 2rem;
+    border-radius: 9999px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-outline:hover {
+    border-color: #DF9A28;
+    color: #DF9A28;
+    transform: translateY(-1px);
+  }
+
+  /* === CARDS === */
+  .card-dark {
+    background: #161616;
+    border: 1px solid #262626;
+    border-radius: 1rem;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .card-dark:hover {
+    border-color: #DF9A28;
+    transform: translateY(-3px);
+  }
+
+  /* === SECTION LABEL === */
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #DF9A28;
+  }
+
+  /* === MARQUEE === */
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  /* === HOVER LIFT === */
+  .hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+
+  /* === GRADIENT TEXT GOLD === */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #DF9A28 0%, #F3BE65 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* === DIVIDER === */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #262626, transparent);
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Scrollbar Dark */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0A0A0A; }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #DF9A28; }
+}

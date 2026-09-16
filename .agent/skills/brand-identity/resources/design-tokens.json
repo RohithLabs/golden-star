@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "brand_name": "Golden Star Company",
+    "description": "Core design tokens for Golden Star Company UI implementation — Slate Dark & Luxury palette with award-winning typography."
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#E11D48",
+      "hover": "#BE123C",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#27272A",
+      "hover": "#3F3F46",
+      "foreground": "#F4F4F5"
+    },
+    "background": {
+      "dark": "#09090B",
+      "card_dark": "#18181B",
+      "light": "#FFFFFF",
+      "surface_light": "#FAF9F6"
+    },
+    "border": {
+      "dark": "#27272A",
+      "light": "#E2E8F0"
+    },
+    "accent": {
+      "crimson": "#E11D48",
+      "wine": "#4C0519",
+      "gold": "#DF9A28",
+      "emerald": "#10B981"
+    },
+    "destructive": "#B91C1C",
+    "muted": {
+      "DEFAULT": "#18181B",
+      "foreground": "#A1A1AA"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "primary_sans": "Plus Jakarta Sans",
+      "editorial_serif": "Newsreader",
+      "modern_sans": "Outfit",
+      "ui_sans": "Inter",
+      "cursive_accent": "Caveat"
+    },
+    "font_family_headings": ["Plus Jakarta Sans", "Newsreader", "sans-serif"],
+    "font_family_body": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+    "font_family_serif": ["Newsreader", "serif"],
+    "font_family_cursive": ["Caveat", "cursive"]
+  },
+  "ui": {
+    "border_radius_default": "0.75rem",
+    "border_radius_small": "0.375rem",
+    "border_radius_full": "9999px",
+    "spacing_base_unit": "4px"
+  }
+}
