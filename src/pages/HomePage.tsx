@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { GoogleMapEmbed } from '../components/common/GoogleMapEmbed';
+import { HeroShiningCard } from '../components/common/HeroShiningCard';
 import { Faq5 } from '../components/ui/faq-5';
 import {
   ArrowRight,
@@ -42,7 +43,8 @@ const FadeIn: React.FC<{ children: React.ReactNode; delay?: number; className?: 
 
 /* ─── Section Label chip ─────────────────────────────────────────────── */
 const SectionLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-[#DF9A28] border border-[#DF9A28]/40 px-3 py-1 rounded-full mb-4">
+  <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-300 border border-white/15 bg-white/[0.04] px-3.5 py-1 rounded-full mb-4">
+    <span className="w-1.5 h-1.5 rounded-full bg-[#DF9A28]" />
     {children}
   </span>
 );
@@ -143,117 +145,125 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
     <div className="flex flex-col min-h-screen bg-[#0A0A0A] text-white overflow-x-hidden font-montserrat">
 
       {/* ═══════════════════════════════════════════════════════════════
-          1. HERO — Pure black, typographic, NO image
-          Like reference: dramatic bold + italic headline with color accents
+          1. HERO — Two-Column Executive Import & Export Trade Suite
+          Left: Multi-tone H1, Subheading, CTAs, Certified Metrics
+          Right: Luminous HeroShiningCard with scroll-driven specular shine
           ═══════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-center bg-[#0A0A0A] pt-28 pb-20 overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center bg-[#0A0A0A] pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden">
 
         {/* Subtle background grid */}
         <div className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)',
             backgroundSize: '60px 60px'
           }}
         />
-        {/* Radial glow behind text */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 w-[700px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse, rgba(223,154,40,0.08) 0%, transparent 70%)' }}
+        {/* Subtle background auras */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none opacity-30 blur-3xl"
+          style={{ background: 'radial-gradient(ellipse, rgba(56,189,248,0.12) 0%, transparent 70%)' }}
+        />
+        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full pointer-events-none opacity-25 blur-3xl"
+          style={{ background: 'radial-gradient(ellipse, rgba(223,154,40,0.15) 0%, transparent 70%)' }}
         />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
-          {/* Top Pill Badge matching user image */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md text-xs text-white/80 font-medium mb-8 shadow-sm"
-          >
-            <span className="px-2 py-0.5 rounded-full bg-[#EF4444] text-[10px] font-black uppercase text-white tracking-wider">
-              NEW
-            </span>
-            <span>High-performance global sourcing &amp; trade logistics in verified 14-day cycles</span>
-          </motion.div>
+            {/* Left Column: Heading, Subhead, CTAs & Metrics */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left">
+              
+              {/* Top Badge matching Screenshot 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md text-xs text-white/80 font-medium mb-6"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="tracking-wider uppercase text-[10px] sm:text-[11px] font-semibold text-zinc-300">
+                  SOUTH INDIA'S PREMIER B2B COMMODITY &amp; EXPORT NETWORK
+                </span>
+              </motion.div>
 
-          {/* Headline with italic emphasis matching user image */}
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] font-bold tracking-tight text-white leading-[1.08] max-w-4xl mx-auto mb-6"
-          >
-            Ship <span className="font-serif italic font-normal text-[#DF9A28]">bespoke commodities</span> in <span className="font-serif italic font-normal text-[#38BDF8]">14 days</span>, not quarters.
-          </motion.h1>
+              {/* Multi-tone Headline matching Screenshot 2 */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl sm:text-5xl lg:text-[3.65rem] font-black tracking-tight leading-[1.08] mb-6"
+              >
+                <span className="block text-white">Golden Star</span>
+                <span className="block text-zinc-300">Global Trade &amp;</span>
+                <span className="block text-[#DF9A28]">Export</span>
+                <span className="block text-[#38BDF8]">Solutions.</span>
+              </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-sm sm:text-base md:text-lg text-white/60 font-normal max-w-2xl mx-auto leading-relaxed mb-8"
-          >
-            The fastest way to source agricultural commodities, petroleum products, and industrial raw materials — delivered globally with guaranteed SGS/ISO certifications.
-          </motion.p>
+              {/* Subheading matching Screenshot 2 */}
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-xl mb-8"
+              >
+                Seamless sourcing, trade &amp; market expansion — connecting reliable producers to global markets across 50+ countries with precision and integrity.
+              </motion.p>
 
-          {/* Interactive Status Pill Capsule */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="inline-flex items-center justify-between gap-4 px-6 py-3 rounded-2xl bg-[#141416] border border-white/10 shadow-lg text-xs text-white/70 max-w-lg w-full mb-10"
-          >
-            <span className="text-[#38BDF8] font-mono font-bold tracking-wider uppercase text-[11px] shrink-0">
-              SOURCING:
-            </span>
-            <span className="text-white font-semibold truncate text-xs text-right">
-              Agricultural Commodities &amp; Energy Products
-            </span>
-          </motion.div>
+              {/* Two CTA Buttons matching Screenshot 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex flex-wrap items-center gap-4 mb-10"
+              >
+                <Link
+                  to="/products"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#DF9A28] hover:bg-[#c8851c] text-black font-bold text-sm transition-all duration-200 shadow-lg shadow-[#DF9A28]/25 cursor-pointer group"
+                >
+                  <span>Explore Products</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
 
-          {/* Two Pill Buttons with ↗ arrows */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-16"
-          >
-            <button
-              type="button"
-              onClick={() => onRequestQuote()}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-black hover:bg-white/90 font-bold text-sm transition-all duration-200 shadow-xl shadow-white/10 cursor-pointer group"
-            >
-              <span>Request a Quote</span>
-              <span className="text-base font-normal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
-            </button>
+                <button
+                  type="button"
+                  onClick={() => onRequestQuote()}
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/10 text-white border border-white/20 hover:border-white/40 font-semibold text-sm transition-all duration-200 cursor-pointer"
+                >
+                  <span>Request a Quote</span>
+                </button>
+              </motion.div>
 
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-white/40 font-semibold text-sm transition-all duration-200 cursor-pointer group"
-            >
-              <span>Explore Products</span>
-              <span className="text-base font-normal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
-            </Link>
-          </motion.div>
+              {/* Trade Statistics Row */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.45, duration: 0.5 }}
+                className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-white/10 w-full max-w-xl"
+              >
+                <div>
+                  <div className="text-xl sm:text-2xl font-black text-white">50+</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mt-0.5">Countries Served</div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-black text-white">1000+</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mt-0.5">Global Partners</div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-black text-white">99.8%</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mt-0.5">On-Time Cargo</div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-black text-[#38BDF8]">SGS / ISO</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mt-0.5">Certified Specs</div>
+                </div>
+              </motion.div>
+            </div>
 
-          {/* Bottom stat row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-8 sm:gap-16 pt-8 border-t border-white/10 w-full"
-          >
-            {[
-              { num: '50+', label: 'Countries Served' },
-              { num: '1000+', label: 'Global Partners' },
-              { num: '99.8%', label: 'On-Time Delivery' },
-              { num: '24/7', label: 'Trade Support' },
-            ].map(s => (
-              <div key={s.label}>
-                <div className="text-2xl sm:text-3xl font-black text-white">{s.num}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-white/40 mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
+            {/* Right Column: HeroShiningCard in the Blue Square Position */}
+            <div className="lg:col-span-5 flex justify-center items-center mt-6 lg:mt-0">
+              <HeroShiningCard />
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -290,9 +300,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
               <p className="text-white/55 font-normal leading-relaxed mb-8">
                 Through innovation, integrity, and a customer-focused approach, Golden Star Company strengthens international trade connections and creates sustainable commercial value for partners across the globe.
               </p>
-              <p className="text-[#DF9A28] italic font-bold text-lg mb-8">
-                "Certified Global Trade Partner — Serving 50+ Nations With Uncompromising Integrity"
-              </p>
+              <div className="border-l-2 border-[#DF9A28]/80 pl-4 py-1.5 mb-8 bg-white/[0.02] rounded-r-lg">
+                <p className="text-zinc-200 italic font-medium text-sm sm:text-base leading-relaxed">
+                  "Certified Global Trade Partner — Serving 50+ Nations With Uncompromising Integrity"
+                </p>
+              </div>
               <div className="flex gap-4 flex-wrap">
                 <Link to="/about" className="btn-primary">Read More <ArrowRight className="w-4 h-4" /></Link>
                 <button onClick={() => onRequestQuote()} className="btn-outline">Contact Us</button>
@@ -329,7 +341,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
           <FadeIn className="text-center mb-16">
             <SectionLabel>Our Expertise</SectionLabel>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-              Business <span className="italic text-[#DF9A28]">Divisions</span>
+              Business <span className="italic text-[#38BDF8]">Divisions</span>
             </h2>
             <p className="text-white/40 mt-3 font-normal max-w-xl mx-auto text-sm">
               Two specialized sectors delivering excellence in international trade

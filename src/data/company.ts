@@ -54,7 +54,7 @@ export const businessDivisions = [
     id: "div-petro",
     title: "Petroleum and Petrochemical Division",
     description: "Comprehensive range of petrochemical products including crude oil, base oils, lubricants, and specialty industrial chemicals. Meeting diverse industrial demands with reliable, efficient, and sustainable supply chain solutions.",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
     bullets: ["Crude Oil & Feedstocks", "Base Oils SN150 / SN500", "Bitumen 60/70 & 80/100", "Virgin Polymer Resins"],
     categorySlug: "petroleum-petrochemical-products",
     badge: "REFINERY PRIME GRADE",

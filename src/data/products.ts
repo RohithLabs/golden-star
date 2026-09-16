@@ -14,7 +14,7 @@ export const productCategories: ProductCategory[] = [
     slug: "petroleum-petrochemical-products",
     title: "Petroleum, Petrochemical & Polymers",
     description: "Comprehensive range of petrochemical products including crude oil, base oils, bitumen, virgin polymer resins, and chemical feedstocks.",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80",
     itemCountLabel: "Refinery Grade Spec"
   },
   {
@@ -30,7 +30,7 @@ export const productCategories: ProductCategory[] = [
     slug: "raw-materials",
     title: "Raw Materials & Minerals",
     description: "Mineral ores, functional additives, industrial fillers, and intermediate processing materials supplying factories globally.",
-    image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1000&q=80",
     itemCountLabel: "Primary Commodities"
   },
   {
@@ -191,8 +191,8 @@ export const productsCatalog: Product[] = [
     shortDescription: "Primary raw material for petroleum refinery products, available in benchmark grades including Brent and light sweet counterparts.",
     fullOverview: "Golden Star Company facilitates bulk allocation contracts for licensed international refineries and industrial purchasers. Structured under FOB terminal lifting or CIF tanker chartering with verifiable SGS Q&Q inspection at loading.",
     images: [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
     ],
     specifications: [
       { label: "API Gravity", value: "31.0° – 38.5° API (Light to Medium Sweet)" },
@@ -219,8 +219,8 @@ export const productsCatalog: Product[] = [
     shortDescription: "Light solvent-refined base oil used primarily as base for automotive lubricants, greases, and industrial oils.",
     fullOverview: "Group I & Group II virgin base oils characterized by excellent thermal stability, low volatility, and clear pale color. Shipped in flexitanks or ISO tank containers directly to lubricant blending facilities worldwide.",
     images: [
-      "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
     ],
     specifications: [
       { label: "Viscosity @ 40°C", value: "28.0 – 32.0 cSt (SN150) | 95 – 105 cSt (SN500)" },
@@ -276,7 +276,8 @@ export const productsCatalog: Product[] = [
     shortDescription: "Prime virgin pellets and clean recycled polymer granules for blow molding, extrusion, and injection manufacturing.",
     fullOverview: "Consistent polymer feedstock for plastic manufacturers, consumer packaging facilities, and automotive component molders globally.",
     images: [
-      "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
     ],
     specifications: [
       { label: "Polymer Base", value: "HDPE (Blow/Film), PP (Homo/Copolymer), PET bottle grade" },
