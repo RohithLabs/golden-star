@@ -42,14 +42,14 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
-    primary: "bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white shadow-md hover:shadow-lg font-semibold",
-    secondary: "bg-ocean-900 text-white hover:bg-ocean-800 active:bg-ocean-950 border border-ocean-800 font-semibold shadow-sm",
-    amber: "bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white shadow-md hover:shadow-lg font-semibold",
-    ocean: "bg-ocean-900 hover:bg-ocean-800 active:bg-ocean-950 text-white font-semibold shadow-sm",
-    'ocean-outline': "bg-transparent text-ocean-900 border-2 border-ocean-900 hover:bg-ocean-900 hover:text-white font-semibold transition-colors",
-    'amber-outline': "bg-transparent text-amber-600 border-2 border-amber-500 hover:bg-amber-50 font-semibold transition-colors",
-    outline: "bg-transparent text-amber-400 border border-amber-500/50 hover:border-amber-400 hover:bg-amber-500/10 active:bg-amber-500/20 font-semibold",
-    'gold-ghost': "bg-transparent text-slate-300 hover:text-amber-400 hover:bg-white/5",
+    primary: "bg-[#EA580C] hover:bg-[#C2410C] active:bg-[#9A3412] text-white shadow-md hover:shadow-lg font-semibold rounded-full",
+    secondary: "bg-white text-slate-800 hover:bg-slate-50 active:bg-slate-100 border border-slate-300 font-semibold shadow-xs rounded-full",
+    amber: "bg-[#EA580C] hover:bg-[#C2410C] active:bg-[#9A3412] text-white shadow-md hover:shadow-lg font-semibold rounded-full",
+    ocean: "bg-[#0284C7] hover:bg-[#0369A1] active:bg-[#075985] text-white font-semibold shadow-xs rounded-full",
+    'ocean-outline': "bg-transparent text-[#0284C7] border-2 border-[#0284C7] hover:bg-sky-50 font-semibold transition-colors rounded-full",
+    'amber-outline': "bg-transparent text-[#EA580C] border-2 border-[#EA580C] hover:bg-orange-50 font-semibold transition-colors rounded-full",
+    outline: "bg-transparent text-slate-800 border border-slate-300 hover:bg-slate-100 font-semibold rounded-full",
+    'gold-ghost': "bg-transparent text-slate-600 hover:text-[#EA580C] hover:bg-orange-50 rounded-full",
   };
 
   const widthStyle = fullWidth ? "w-full" : "";

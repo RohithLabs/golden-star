@@ -4,7 +4,6 @@ import {
   LinkedinIcon,
   TwitterIcon,
   YoutubeIcon,
-  Star,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { companyData } from '../../data/company';

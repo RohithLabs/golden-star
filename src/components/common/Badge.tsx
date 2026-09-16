@@ -2,31 +2,34 @@ import React from 'react';
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'gold' | 'navy' | 'emerald' | 'slate';
+  variant?: 'orange' | 'blue' | 'red' | 'slate' | 'gold' | 'navy' | 'emerald';
   size?: 'sm' | 'md';
   className?: string;
 }
 
 export const Badge: React.FC<BadgeProps> = ({
   children,
-  variant = 'gold',
+  variant = 'orange',
   size = 'md',
   className = ''
 }) => {
   const sizeStyles = {
-    sm: "px-2 py-0.5 text-xs font-medium tracking-wider uppercase",
-    md: "px-2.5 py-1 text-xs font-semibold tracking-wide"
+    sm: "px-2 py-0.5 text-xs font-semibold tracking-wider uppercase",
+    md: "px-2.5 py-1 text-xs font-bold tracking-wide"
   };
 
-  const variantStyles = {
-    gold: "bg-gold-500/15 text-gold-400 border border-gold-500/30",
-    navy: "bg-navy-800 text-slate-300 border border-navy-700",
-    emerald: "bg-emerald-950/60 text-emerald-400 border border-emerald-500/30",
-    slate: "bg-slate-800/80 text-slate-400 border border-slate-700"
+  const variantStyles: Record<string, string> = {
+    orange: "bg-orange-50 text-[#EA580C] border border-orange-200",
+    gold: "bg-orange-50 text-[#EA580C] border border-orange-200",
+    blue: "bg-sky-50 text-[#0284C7] border border-sky-200",
+    navy: "bg-sky-50 text-[#0284C7] border border-sky-200",
+    red: "bg-rose-50 text-[#DC2626] border border-rose-200",
+    emerald: "bg-emerald-50 text-emerald-700 border border-emerald-200",
+    slate: "bg-slate-100 text-slate-700 border border-slate-200"
   };
 
   return (
-    <span className={`inline-flex items-center rounded-sm font-sans ${sizeStyles[size]} ${variantStyles[variant]} ${className}`}>
+    <span className={`inline-flex items-center rounded-full ${sizeStyles[size]} ${variantStyles[variant] || variantStyles.orange} ${className}`}>
       {children}
     </span>
   );

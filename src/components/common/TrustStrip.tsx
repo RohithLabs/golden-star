@@ -23,7 +23,7 @@ export const TrustStrip: React.FC<TrustStripProps> = ({ className = '' }) => {
   ];
 
   return (
-    <section aria-label="Trust Indicators" className={`border-y border-navy-700/80 bg-navy-900/90 py-6 sm:py-8 backdrop-blur-sm ${className}`}>
+    <section aria-label="Trust Indicators" className={`border-y border-slate-200 bg-slate-50/80 py-6 sm:py-8 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
           {items.map((item, idx) => {
@@ -33,14 +33,14 @@ export const TrustStrip: React.FC<TrustStripProps> = ({ className = '' }) => {
                 key={idx} 
                 className="flex items-start space-x-3.5 group transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="w-10 h-10 rounded bg-navy-850 border border-navy-700 flex items-center justify-center text-gold-400 shrink-0 group-hover:border-gold-500/50 group-hover:bg-gold-500/10 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-2xs flex items-center justify-center text-[#0284C7] shrink-0 group-hover:border-[#EA580C] group-hover:text-[#EA580C] transition-colors">
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white font-heading tracking-wide group-hover:text-gold-400 transition-colors">
+                  <h3 className="text-sm font-bold text-slate-900 tracking-wide group-hover:text-[#EA580C] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-0.5 leading-snug">
+                  <p className="text-xs text-slate-500 mt-0.5 leading-snug">
                     {item.desc}
                   </p>
                 </div>

@@ -177,11 +177,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-orange-200 bg-orange-50/80 backdrop-blur-md text-xs text-slate-800 font-semibold mb-6 shadow-xs"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-orange-200 bg-orange-50 text-xs font-bold text-slate-800 mb-5 shadow-2xs"
               >
                 <span className="w-2 h-2 rounded-full bg-[#EA580C] animate-pulse" />
-                <span className="tracking-wider uppercase text-[10px] sm:text-[11px] font-bold text-slate-800">
-                  SOUTH INDIA'S PREMIER B2B COMMODITY &amp; EXPORT NETWORK
+                <span className="tracking-wider uppercase text-[11px] font-bold text-slate-800">
+                  Global Trade &amp; Export House
                 </span>
               </motion.div>
 
@@ -190,12 +190,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-[3.65rem] font-black tracking-tight leading-[1.08] mb-6"
+                className="text-4xl sm:text-5xl lg:text-[3.65rem] font-black tracking-tight leading-[1.08] mb-5"
               >
-                <span className="block text-slate-950">Golden Star</span>
-                <span className="block text-slate-800">Global Trade &amp;</span>
-                <span className="block text-[#EA580C]">Export</span>
-                <span className="block text-[#0284C7]">Solutions.</span>
+                <span className="text-slate-950">Golden Star </span>
+                <span className="italic text-[#EA580C]">Company</span>
+                <span className="block text-slate-900 font-extrabold text-3xl sm:text-4xl lg:text-5xl mt-1">
+                  Premier <span className="italic text-[#0284C7]">Trade &amp; Export</span> Solutions
+                </span>
               </motion.h1>
 
               {/* Subheading */}
@@ -203,9 +204,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl mb-8"
+                className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl mb-7"
               >
-                Seamless sourcing, trade &amp; market expansion — connecting reliable producers to global markets across 50+ countries with precision and integrity.
+                Connecting reliable producers with global markets across 50+ countries. Certified quality, secure logistics, and competitive trade pricing.
               </motion.p>
 
               {/* Two CTA Buttons */}
@@ -213,11 +214,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-wrap items-center gap-4 mb-10"
+                className="flex flex-wrap items-center gap-4 mb-8"
               >
                 <Link
                   to="/products"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-sm transition-all duration-200 shadow-lg shadow-orange-500/25 cursor-pointer group"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-sm transition-all duration-200 shadow-md shadow-orange-500/20 cursor-pointer group"
                 >
                   <span>Explore Products</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -226,7 +227,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 <button
                   type="button"
                   onClick={() => onRequestQuote()}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-sm transition-all duration-200 shadow-xs hover:border-slate-400 cursor-pointer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-sm transition-all duration-200 shadow-2xs hover:border-slate-400 cursor-pointer"
                 >
                   <span>Request a Quote</span>
                 </button>
@@ -237,23 +238,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onRequestQuote }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.45, duration: 0.5 }}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-slate-200 w-full max-w-xl"
+                className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-5 border-t border-slate-200 w-full max-w-xl"
               >
                 <div>
                   <div className="text-xl sm:text-2xl font-black text-slate-950">50+</div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Countries Served</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Countries</div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-950">1000+</div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Global Partners</div>
+                  <div className="text-xl sm:text-2xl font-black text-slate-950">1,000+</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Partners</div>
                 </div>
                 <div>
                   <div className="text-xl sm:text-2xl font-black text-slate-950">99.8%</div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">On-Time Cargo</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">On-Time</div>
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-black text-[#0284C7]">SGS / ISO</div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Certified Specs</div>
+                  <div className="text-xl sm:text-2xl font-black text-[#0284C7]">ISO / SGS</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">Certified</div>
                 </div>
               </motion.div>
             </div>
