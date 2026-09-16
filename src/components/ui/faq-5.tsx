@@ -57,34 +57,35 @@ export const Faq5 = ({
   className = '',
 }: Faq5Props) => {
   return (
-    <section id={id} className={cn('py-24 bg-[#0A0A0A]', className)}>
+    <section id={id} className={cn('py-24 bg-slate-50 border-t border-slate-200', className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <Badge className="text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#EA580C] border border-orange-200 bg-orange-50 px-3.5 py-1 rounded-full mb-4 shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#EA580C]" />
             {badge}
-          </Badge>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+          </span>
+          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {heading}
           </h2>
-          <p className="mt-4 font-normal text-white/45 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="mt-4 font-normal text-slate-600 max-w-xl mx-auto text-sm leading-relaxed">
             {description}
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl space-y-6">
+        <div className="mx-auto mt-12 max-w-3xl space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="flex gap-5 p-6 rounded-2xl bg-[#111111] border border-white/8 hover:border-[#DF9A28]/30 transition-colors"
+              className="flex gap-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-slate-300 hover:shadow-md transition-all"
             >
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#DF9A28]/15 border border-[#DF9A28]/25 font-mono text-xs font-black text-[#DF9A28]">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-orange-50 border border-orange-200 font-mono text-xs font-bold text-[#EA580C]">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <div>
-                <h3 className="font-bold text-white mb-2 text-sm leading-snug">
+                <h3 className="font-bold text-slate-900 mb-2 text-sm leading-snug">
                   {faq.question}
                 </h3>
-                <p className="text-sm text-white/45 font-normal leading-relaxed">
+                <p className="text-sm text-slate-600 font-normal leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

@@ -41,7 +41,6 @@ export function MinimalFooter({ onRequestQuote }: MinimalFooterProps) {
   ];
 
   return (
-  return (
     <footer className="bg-slate-50 border-t border-slate-200 text-slate-600">
       {/* Orange accent top line */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-[#EA580C]/50 to-transparent" />
